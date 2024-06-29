@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdvlunmw7fxpc"]
+
+[ext_resource type="Texture2D" uid="uid://cr4omxvn64e6c" path="res://assents/slideshow-1632267591.jpg" id="1_c80p0"]
+[ext_resource type="Script" path="res://inicio.gd" id="2_7fijv"]
+[ext_resource type="Script" path="res://sair.gd" id="3_4uev0"]
+
+[node name="tela" type="Node2D"]
+
+[node name="fundo" type="Sprite2D" parent="."]
+position = Vector2(575.75, 323)
+scale = Vector2(0.596094, 0.594444)
+texture = ExtResource("1_c80p0")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 472.0
+offset_top = 246.0
+offset_right = 686.0
+offset_bottom = 406.0
+
+[node name="inicio" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.025
+offset_left = 42.0
+offset_top = 23.0
+offset_right = 182.0
+offset_bottom = 51.0
+text = "Iniciar"
+script = ExtResource("2_7fijv")
+
+[node name="sair" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.025
+offset_left = 43.0
+offset_top = 65.0
+offset_right = 183.0
+offset_bottom = 93.0
+text = "sair"
+script = ExtResource("3_4uev0")
+
+[node name="entrada" type="Label" parent="."]
+offset_left = 296.0
+offset_top = 174.0
+offset_right = 872.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(0.707811, 0.581221, 0.309996, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "Seja bem vindo ao JumpMan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="entrada2" type="Label" parent="."]
+offset_left = 305.0
+offset_top = 554.0
+offset_right = 881.0
+offset_bottom = 625.0
+theme_override_colors/font_color = Color(0.707811, 0.581221, 0.309996, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Desenvolvido pela DJk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/inicio" to="Control/inicio" method="_on_pressed"]
+[connection signal="pressed" from="Control/sair" to="Control/sair" method="_on_pressed"]
